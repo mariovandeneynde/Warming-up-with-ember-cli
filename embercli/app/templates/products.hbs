@@ -1,0 +1,18 @@
+<div class='row'>
+      <div class='col-sm-3'>
+        <div class='list-group'>
+        {{#link-to 'products.deals' classNames='list-group-item'}}Deals{{/link-to}}
+        {{#link-to 'products.onsale' classNames='list-group-item'}}On Sale{{/link-to}}
+      </div>
+        <div class='list-group'>
+          {{#each}}
+            {{#link-to 'product' this classNames='list-group-item'}}
+              {{title}}
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
+      <div class='col-sm-9'>
+        {{outlet}}
+      </div>
+    </div>

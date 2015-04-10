@@ -1,0 +1,26 @@
+<div class='row'>
+      <div class='col-sm-7'>
+        <h2>{{title}}</h2>
+        <h3 class='text-success'>${{price}}</h3>
+        <p class='text-muted'>{{description}}</p>
+        <p class='text-muted'>This Product has a {{rating}} star rating!</p>
+        <p>Finely crafted by {{#link-to 'contact' crafter}}{{crafter.name}}{{/link-to}}.</p>
+        {{render 'reviews' reviews}}
+        <div class='new-rating'>
+          <h3>Rate {{title}}</h3>
+          
+        </div>
+        <div class='new-review'>
+          <h3>Review {{title}}</h3>
+          {{#if text}}
+            <p class='text-muted'>{{text}}</p>
+          {{/if}}
+          {{textarea valueBinding='text'}}
+          <button {{action 'createReview'}} class='btn-primary'>Review</button>
+        </div>
+      </div>
+      <div class='col-sm-5'>
+        <img {{bind-attr src='image'}} class='img-thumbnail img-rounded'/>
+      </div>
+    </div>
+    {{contact-details contact=crafter className='row'}}

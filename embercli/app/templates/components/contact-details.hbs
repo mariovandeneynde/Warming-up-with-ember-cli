@@ -1,0 +1,10 @@
+<div class='col-sm-9'>
+      <h2>About {{contact.name}}</h2>
+      <p>{{contact.about}}</p>
+      {{#if isProductive}}
+        <p class='text-muted'>Responsible for {{productsCount}} amazing products!</p>
+      {{/if}}
+    </div>
+    <div class='col-sm-3'>
+      <img {{bind-attr src='contact.avatar' alt='contact.name'}} class='img-thumbnail img-rounded'/>
+    </div>

@@ -1,0 +1,6 @@
+ <h3>Products here!</h3>
+    <ul>
+      {{#each}}
+        <li>{{#link-to 'product' this}}{{title}}{{/link-to}}</li>
+      {{/each}}
+    </ul>

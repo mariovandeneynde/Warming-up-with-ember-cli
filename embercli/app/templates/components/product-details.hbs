@@ -1,0 +1,11 @@
+<img {{bind-attr src='product.image'}} class='img-thumbnail col-sm-5' />
+    <div class='col-sm-7'>
+      <h2>{{product.title}}</h2>
+      <p class='product-description'>{{product.description}}</p>
+      <p>{{#link-to 'product' product class='btn btn-success'}}
+        Buy for ${{product.price}}{{/link-to}}
+      </p>
+      {{#if hasReviews}}
+        <p class='text-muted'>Read all reviews ({{reviewsCount}}).</p>
+      {{/if}}
+    </div>

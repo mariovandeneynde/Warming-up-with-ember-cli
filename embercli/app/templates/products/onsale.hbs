@@ -1,0 +1,6 @@
+<h1>Products On Sale</h1>
+    <ul class='list-unstyled'>
+      {{#each}}
+        {{product-details product=this classNames='row' tagName='li'}}
+      {{/each}}
+    </ul>
