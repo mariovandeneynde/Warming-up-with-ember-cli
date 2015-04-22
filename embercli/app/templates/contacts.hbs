@@ -4,9 +4,9 @@
       </div>
       <div class='col-sm-3'>
         <div class='list-group'>
-          {{#each}}
-            {{#link-to 'contact' this classNames='list-group-item'}}
-              {{name}}
+          {{#each contact in model}}
+            {{#link-to 'contact' contact classNames='list-group-item'}}
+              {{contact.name}}
             {{/link-to}}
           {{/each}}
         </div>

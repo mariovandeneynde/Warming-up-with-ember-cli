@@ -1,7 +1,7 @@
 <h3>Reviews</h3>
     <ul>
-      {{#each}}
-        <li><p>{{text}}</p></li>
+      {{#each review in model}}
+        <li><p>{{review.text}}</p></li>
       {{else}}
         <li><p class='text-muted'><em>No reviews yet. Be the first to write one!</em></p></li>
       {{/each}}

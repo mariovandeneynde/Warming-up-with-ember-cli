@@ -1,4 +1,4 @@
-<div class='jumbotron'>
+  <div class='jumbotron'>
       <h1>Welcome to The Flint &amp; Flame!</h1>
       <p class='tagline'>
         <img {{bind-attr src='logo'}} alt='Logo' />
@@ -11,8 +11,8 @@
       </p>
     </div>
     <div class='row'>
-      {{#each onSale}}
-        {{product-details product=this classNames='col-sm-4'}}
+      {{#each product in onSale}}
+        {{product-details product=product classNames='col-sm-4'}}
       {{/each}}
     </div>
     <p class='pull-right text-muted'>Rendered on {{time}}</p>

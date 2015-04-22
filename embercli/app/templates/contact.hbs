@@ -1,10 +1,10 @@
 <div class='row'>
       <div class='col-sm-5'>
-        <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
+        <img {{bind-attr src='model.avatar' alt='model.name'}} class='img-thumbnail img-rounded'/>
       </div>
       <div class='col-sm-7'>
-        <h2>{{name}}</h2>
-        <p>{{about}}</p>
-        {{render 'contact/products' products}}
+        <h2>{{model.name}}</h2>
+        <p>{{model.about}}</p>
+        {{render 'contact/products' model.products}}
       </div>
     </div>

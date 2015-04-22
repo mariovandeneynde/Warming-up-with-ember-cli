@@ -5,9 +5,9 @@
         {{#link-to 'products.onsale' classNames='list-group-item'}}On Sale{{/link-to}}
       </div>
         <div class='list-group'>
-          {{#each}}
-            {{#link-to 'product' this classNames='list-group-item'}}
-              {{title}}
+          {{#each product in model}}
+            {{#link-to 'product' product classNames='list-group-item'}}
+              {{product.title}}
             {{/link-to}}
           {{/each}}
         </div>

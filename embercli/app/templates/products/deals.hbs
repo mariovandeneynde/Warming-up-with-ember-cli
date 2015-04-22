@@ -1,6 +1,6 @@
  <h1>Todays Product Deals!</h1>
     <ul class='list-unstyled'>
-      {{#each}}
-        {{product-details product=this classNames='row' tagName='li'}}
+      {{#each product in model}}
+        {{product-details product=product classNames='row' tagName='li'}}
       {{/each}}
     </ul>
